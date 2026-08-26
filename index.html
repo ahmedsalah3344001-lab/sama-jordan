@@ -1,48 +1,202 @@
-Build a professional single-page website for a restaurant called "Sama Al-Ordon"
-(سما الأردن), serving authentic Jordanian and Levantine cuisine. The site must be
-fully in Arabic with RTL (right-to-left) layout.
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم سما الأردن</title>
+    <style>
+        :root {
+            --bg-color: #fcfbfa;
+            --primary-dark: #1b2e23;
+            --olive-green: #2d4a3e;
+            --terracotta: #c05a3e;
+            --gold: #d4af37;
+            --cream: #f4efe6;
+            --text-color: #2b2b2b;
+        }
+        body {
+            font-family: 'Tahoma', 'Cairo', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--gold);
+        }
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 32px;
+            color: var(--gold);
+        }
+        header p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: var(--cream);
+        }
+        .contact-info {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .contact-info a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        .section-title {
+            text-align: center;
+            color: var(--olive-green);
+            font-size: 24px;
+            margin: 30px 0 20px 0;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 5px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        .menu-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-right: 5px solid var(--terracotta);
+        }
+        .item-details h3 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+            color: var(--primary-dark);
+        }
+        .item-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .item-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--terracotta);
+            background: var(--cream);
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+        .action-btns {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .btn {
+            background-color: var(--terracotta);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .btn-insta {
+            background-color: var(--olive-green);
+        }
+    </style>
+</head>
+<body>
 
-Restaurant info:
-- Name: Sama Al-Ordon Restaurant
-- Address: 3A Mohamed Kheiry St., Al-Manial Al-Sharqi, Misr Al-Qadima district,
-  Cairo Governorate, 4240264
-- Phone: 02 23623557
-- Instagram: instagram.com/sama_jo_rest
+    <header>
+        <h1>مطعم سما الأردن</h1>
+        <p>نكهة الأردن والشام — مزّة بيتية، صاجية على الفحم، وساندويتشات تُلف أمامك</p>
+        <div class="contact-info">
+            <span>📍 3A شارع محمد خيري، المنيل الشرقي، القاهرة</span><br>
+            <span>📞 0223623557</span>
+        </div>
+    </header>
 
-Visual identity:
-- "Sama" means "sky" in Arabic — add a light visual nod to that (scattered faint
-  stars in the header) without leaning on the sky concept literally. The core
-  design should be grounded in Jordanian/Levantine culture instead: limestone
-  texture, olive oil, spices, traditional brass seals/stamps.
-- Colors: warm stone cream (background), deep olive green, brick/terracotta red,
-  brass gold, deep navy (subtle "sky" accent), dark charcoal ink for text.
-- Typography: a celebratory Arabic display font (Aref Ruqaa) for headings, and a
-  clean modern Arabic sans font (Cairo/Tajawal) for body text and prices.
-- Signature element: a circular seal/stamp graphic near the top, echoing
-  traditional Arabic emblem/stamp design, with the restaurant name in the
-  calligraphic display font.
+    <div class="container">
+        <div class="action-btns">
+            <a href="tel:0223623557" class="btn">اتصل للطلب</a>
+            <a href="https://instagram.com/sama_jo_rest" target="_blank" class="btn btn-insta">تابعنا على إنستغرام</a>
+        </div>
 
-Page structure:
-1. Header: large restaurant name, short tagline, CTA buttons (Call + Instagram),
-   plus phone number/Instagram in a top bar.
-2. Sticky navigation bar with menu category links, with scrollspy highlighting
-   the active section while scrolling.
-3. Full menu split into five sections, each inside an elevated card with a soft
-   shadow:
-   - Dishes (24 items)
-   - Add-ons & takeaway containers
-   - Sandwiches (with a price table: Shami / Saj / Kaak bread options)
-   - Fatteh
-   - Zinger sandwiches & meals (styled as a distinct highlighted dark card)
-4. Footer: full address + a "Open in Google Maps" button, working hours, and
-   phone/Instagram links.
-5. Two floating action buttons (Call + Instagram) that follow the visitor while
-   scrolling.
+        <h2 class="section-title">الأطباق الرئيسية</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-details">
+                    <h3>منسف أردني أصيل</h3>
+                    <p>لحم تازج مع اللبن البلدي والجميد والمنسف الفاخر.</p>
+                </div>
+                <div class="item-price">220 ج.م</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <h3>صاجية لحم ودجاج</h3>
+                    <p>مجهزة على أصول المطبخ الأردني والشامي.</p>
+                </div>
+                <div class="item-price">180 ج.م</div>
+            </div>
+        </div>
 
-Interaction & motion:
-- Sections fade in gradually as the user scrolls into view.
-- Hover highlight effect on each menu item row.
-- Fully responsive, mobile-first layout.
+        <h2 class="section-title">المزّات والمقبلات</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-details">
+                    <h3>حمص وفول بيتي</h3>
+                    <p>مزبوطة على الطريقة الأصيلة.</p>
+                </div>
+                <div class="item-price">45 ج.م</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <h3>مسبحة / قدسية</h3>
+                    <p>طازجة وساخنة مع الخلطة الخاصة.</p>
+                </div>
+                <div class="item-price">50 ج.م</div>
+            </div>
+        </div>
 
-Include every price exactly as given, with no rounding, and make sure each
-number is clearly legible.
+        <h2 class="section-title">الساندويتشات</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-details">
+                    <h3>ساندويتش صاج دجاج أو لحم</h3>
+                    <p>خيارات خبز شامي أو صاج أو كعك.</p>
+                </div>
+                <div class="item-price">60 ج.م</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <h3>ساندويتش زنجر سبيسي</h3>
+                    <p>مقرمش وحار على الطريقة الخاصة.</p>
+                </div>
+                <div class="item-price">65 ج.م</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 - مطعم سما الأردن</p>
+    </footer>
+
+</body>
+</html>
