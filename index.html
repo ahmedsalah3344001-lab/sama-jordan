@@ -1,86 +1,48 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مطعم سما الأردن</title>
-    <style>
-        body {
-            font-family: Tahoma, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-        }
-        h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-        .container {
-            padding: 20px;
-            max-width: 600px;
-            margin: auto;
-        }
-        .menu-item {
-            background: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: right;
-        }
-        .menu-item h3 {
-            margin: 0 0 5px 0;
-            color: #e74c3c;
-        }
-        .menu-item p {
-            margin: 0;
-            color: #666;
-        }
-        footer {
-            margin-top: 30px;
-            padding: 10px;
-            background: #2c3e50;
-            color: white;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
+Build a professional single-page website for a restaurant called "Sama Al-Ordon"
+(سما الأردن), serving authentic Jordanian and Levantine cuisine. The site must be
+fully in Arabic with RTL (right-to-left) layout.
 
-    <header>
-        <h1>مطعم سما الأردن</h1>
-        <p>أهلاً بكم في عالم الطعم الأصيل والمشاوي اللذيذة</p>
-    </header>
+Restaurant info:
+- Name: Sama Al-Ordon Restaurant
+- Address: 3A Mohamed Kheiry St., Al-Manial Al-Sharqi, Misr Al-Qadima district,
+  Cairo Governorate, 4240264
+- Phone: 02 23623557
+- Instagram: instagram.com/sama_jo_rest
 
-    <div class="container">
-        <h2>قائمة الطعام المميزة</h2>
+Visual identity:
+- "Sama" means "sky" in Arabic — add a light visual nod to that (scattered faint
+  stars in the header) without leaning on the sky concept literally. The core
+  design should be grounded in Jordanian/Levantine culture instead: limestone
+  texture, olive oil, spices, traditional brass seals/stamps.
+- Colors: warm stone cream (background), deep olive green, brick/terracotta red,
+  brass gold, deep navy (subtle "sky" accent), dark charcoal ink for text.
+- Typography: a celebratory Arabic display font (Aref Ruqaa) for headings, and a
+  clean modern Arabic sans font (Cairo/Tajawal) for body text and prices.
+- Signature element: a circular seal/stamp graphic near the top, echoing
+  traditional Arabic emblem/stamp design, with the restaurant name in the
+  calligraphic display font.
 
-        <div class="menu-item">
-            <h3>منسف أردني أصيل</h3>
-            <p>لحم تازج مع اللبن البلدي والجميد والمنسف الفاخر.</p>
-        </div>
+Page structure:
+1. Header: large restaurant name, short tagline, CTA buttons (Call + Instagram),
+   plus phone number/Instagram in a top bar.
+2. Sticky navigation bar with menu category links, with scrollspy highlighting
+   the active section while scrolling.
+3. Full menu split into five sections, each inside an elevated card with a soft
+   shadow:
+   - Dishes (24 items)
+   - Add-ons & takeaway containers
+   - Sandwiches (with a price table: Shami / Saj / Kaak bread options)
+   - Fatteh
+   - Zinger sandwiches & meals (styled as a distinct highlighted dark card)
+4. Footer: full address + a "Open in Google Maps" button, working hours, and
+   phone/Instagram links.
+5. Two floating action buttons (Call + Instagram) that follow the visitor while
+   scrolling.
 
-        <div class="menu-item">
-            <h3>مشاوي مشكلة</h3>
-            <p>تشكيلة فاخرة من الكباب، الشيش طاووق، واللحم المشوي على الفحم.</p>
-        </div>
+Interaction & motion:
+- Sections fade in gradually as the user scrolls into view.
+- Hover highlight effect on each menu item row.
+- Fully responsive, mobile-first layout.
 
-        <div class="menu-item">
-            <h3>سما الأردن الخاصة</h3>
-            <p>وجبة العائلة الكبرى المجهزة بأجود المكونات الطازجة.</p>
-        </div>
-    </div>
-
-    <footer>
-        <p>جميع الحقوق محفوظة &copy; 2026 - مطعم سما الأردن</p>
-    </footer>
-
-</body>
-</html>
+Include every price exactly as given, with no rounding, and make sure each
+number is clearly legible.
